@@ -6,8 +6,9 @@
 //
 
 protocol DetailsBusinessLogic {
-    var isFavourite: Bool { get set }
-    func providePhotoDetails(request: DetailsRequest)
+    var isFavourite: Bool { get }
+    func providePhotoDetails(request: ShowDetailsRequest)
+    func setFavouriteStatus()
 }
 
 protocol DetailDataStore {
@@ -21,7 +22,7 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
     var photo: Photo?
     var isFavourite: Bool = false
     
-    func providePhotoDetails(request: DetailsRequest) {
+    func providePhotoDetails(request: ShowDetailsRequest) {
         
         // TEMPORARILY
         photo = request.photo
@@ -34,11 +35,19 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
         let stringURL = photo?.stringURL
         let imageData = worker?.getImage(from: stringURL)
         
-        let response = DetailsResponse(photoTitle: title,
+        let response = ShowDetailsResponse(photoTitle: title,
                                        photoId: id,
                                        photoImageData: imageData,
                                        isFavourite: isFavourite)
         
         presenter?.presentPhotoDetails(response: response)
+    }
+    
+    func setFavouriteStatus() {
+        isFavourite.toggle()
+        worker?.setFavouriteStatus(for: photo?.title ?? "", with: isFavourite)
+        
+        let response = SetFavouriteStatusResponse(isFavourite: isFavourite)
+        presenter?.presentFavouriteStatus(response: response)
     }
 }

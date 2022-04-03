@@ -15,4 +15,8 @@ final class DetailsWorker {
     func getFavouriteStatus(for photoTitle: String) -> Bool {
         DataManager.shared.getFavouriteStatus(for: photoTitle)
     }
+    
+    func setFavouriteStatus(for photoTitle: String, with status: Bool) {
+        DataManager.shared.setFavouriteStatus(for: photoTitle, with: status)
+    }
 }

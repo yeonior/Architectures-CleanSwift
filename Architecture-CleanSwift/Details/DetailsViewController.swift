@@ -8,7 +8,8 @@
 import UIKit
 
 protocol DetailsDisplayLogic: AnyObject {
-    func displayPhotoDetails(viewModel: DetailsViewModel)
+    func displayPhotoDetails(viewModel: ShowDetailsViewModel)
+    func displayFavouriteButtonStatus(viewModel: SetFavouriteStatusViewModel)
 }
 
 final class DetailsViewController: UIViewController {
@@ -88,11 +89,11 @@ final class DetailsViewController: UIViewController {
     
     @objc
     private func favoriteButtonTouched() {
-        
+        interactor?.setFavouriteStatus()
     }
     
     private func passRequest() {
-        let request = DetailsRequest(photo: photo)
+        let request = ShowDetailsRequest(photo: photo)
         interactor?.providePhotoDetails(request: request)
     }
     
@@ -106,10 +107,14 @@ final class DetailsViewController: UIViewController {
 }
 
 extension DetailsViewController: DetailsDisplayLogic {
-    func displayPhotoDetails(viewModel: DetailsViewModel) {
+    func displayPhotoDetails(viewModel: ShowDetailsViewModel) {
         photoTextView.text = viewModel.photoTitle
         photoIdLabel.text = viewModel.photoId
         photoImageView.image = UIImage(data: viewModel.photoImageData)
+        favouriteButton.setImage(getImageForFavouriteButton(with: viewModel.isFavourite), for: .normal)
+    }
+    
+    func displayFavouriteButtonStatus(viewModel: SetFavouriteStatusViewModel) {
         favouriteButton.setImage(getImageForFavouriteButton(with: viewModel.isFavourite), for: .normal)
     }
 }

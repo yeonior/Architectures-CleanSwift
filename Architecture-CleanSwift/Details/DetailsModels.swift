@@ -7,9 +7,11 @@
 
 import Foundation
 
-typealias DetailsRequest = PhotoDetails.ShowDetails.Request
-typealias DetailsResponse = PhotoDetails.ShowDetails.Response
-typealias DetailsViewModel = PhotoDetails.ShowDetails.ViewModel
+typealias ShowDetailsRequest = PhotoDetails.ShowDetails.Request
+typealias ShowDetailsResponse = PhotoDetails.ShowDetails.Response
+typealias ShowDetailsViewModel = PhotoDetails.ShowDetails.ViewModel
+typealias SetFavouriteStatusResponse = PhotoDetails.SetFavouriteStatus.Response
+typealias SetFavouriteStatusViewModel = PhotoDetails.SetFavouriteStatus.ViewModel
 
 enum PhotoDetails {
     
@@ -35,6 +37,17 @@ enum PhotoDetails {
             let photoTitle: String
             let photoId: String
             let photoImageData: Data
+            let isFavourite: Bool
+        }
+    }
+    
+    enum SetFavouriteStatus {
+        
+        struct Response {
+            let isFavourite: Bool
+        }
+        
+        struct ViewModel {
             let isFavourite: Bool
         }
     }

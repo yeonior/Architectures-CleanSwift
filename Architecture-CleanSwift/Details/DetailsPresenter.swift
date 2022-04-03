@@ -19,9 +19,11 @@ final class DetailsPresenter: DetailsPresentationLogic {
         let photoTitle = response.photoTitle ?? ""
         let photoId = "#" + String(response.photoId ?? 0)
         let photoImageData = response.photoImageData ?? Data()
+        let isFavourite = response.isFavourite
         let viewModel = DetailsViewModel(photoTitle: photoTitle,
                                          photoId: photoId,
-                                         photoImageData: photoImageData)
+                                         photoImageData: photoImageData,
+                                         isFavourite: isFavourite)
         
         viewController?.displayPhotoDetails(viewModel: viewModel)
     }

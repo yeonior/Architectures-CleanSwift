@@ -95,6 +95,14 @@ final class DetailsViewController: UIViewController {
         let request = DetailsRequest(photo: photo)
         interactor?.providePhotoDetails(request: request)
     }
+    
+    private func getImageForFavouriteButton(with status: Bool) -> UIImage {
+        var imageName = ""
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 25, weight: .medium, scale: .large)
+        imageName = status ? "heart.fill" : "heart"
+        
+        return UIImage(systemName: imageName, withConfiguration: imageConfig)!
+    }
 }
 
 extension DetailsViewController: DetailsDisplayLogic {
@@ -102,5 +110,6 @@ extension DetailsViewController: DetailsDisplayLogic {
         photoTextView.text = viewModel.photoTitle
         photoIdLabel.text = viewModel.photoId
         photoImageView.image = UIImage(data: viewModel.photoImageData)
+        favouriteButton.setImage(getImageForFavouriteButton(with: viewModel.isFavourite), for: .normal)
     }
 }

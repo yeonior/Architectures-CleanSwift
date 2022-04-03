@@ -27,6 +27,7 @@ enum PhotoDetails {
             let photoTitle: String?
             let photoId: Int?
             let photoImageData: Data?
+            let isFavourite: Bool
         }
         
         // presenter -> viewController
@@ -34,6 +35,7 @@ enum PhotoDetails {
             let photoTitle: String
             let photoId: String
             let photoImageData: Data
+            let isFavourite: Bool
         }
     }
 }

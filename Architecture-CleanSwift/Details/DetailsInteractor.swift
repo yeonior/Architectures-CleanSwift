@@ -6,6 +6,7 @@
 //
 
 protocol DetailsBusinessLogic {
+    var isFavourite: Bool { get set }
     func providePhotoDetails(request: DetailsRequest)
 }
 
@@ -18,6 +19,7 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
     var presenter: DetailsPresentationLogic?
     var worker: DetailsWorker?
     var photo: Photo?
+    var isFavourite: Bool = false
     
     func providePhotoDetails(request: DetailsRequest) {
         
@@ -25,14 +27,17 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
         photo = request.photo
         
         worker = DetailsWorker()
+        isFavourite = worker?.getFavouriteStatus(for: photo?.title ?? "") ?? false
         
         let title = photo?.title
         let id = photo?.id
         let stringURL = photo?.stringURL
         let imageData = worker?.getImage(from: stringURL)
+        
         let response = DetailsResponse(photoTitle: title,
                                        photoId: id,
-                                       photoImageData: imageData)
+                                       photoImageData: imageData,
+                                       isFavourite: isFavourite)
         
         presenter?.presentPhotoDetails(response: response)
     }

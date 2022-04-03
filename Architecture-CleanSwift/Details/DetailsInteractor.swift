@@ -6,10 +6,25 @@
 //
 
 protocol DetailsBusinessLogic {
-    
+    func providePhotoDetails(request: DetailsRequest)
 }
 
-final class DetailsInteractor: DetailsBusinessLogic {
+protocol DetailDataStore {
+    var photo: Photo? { get set }
+}
+
+final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
     
-    var presenter: MainPresentationLogic?
+    var presenter: DetailsPresentationLogic?
+    var photo: Photo?
+    
+    func providePhotoDetails(request: DetailsRequest) {
+        
+        // TEMPORARILY
+        photo = request.photo
+        
+        let title = photo?.title
+        let response = DetailsResponse(photoTitle: title)
+        presenter?.presentPhotoDetails(response: response)
+    }
 }

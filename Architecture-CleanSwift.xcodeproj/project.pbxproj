@@ -20,6 +20,7 @@
 		A2DA6CF527F968B400498366 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF427F968B400498366 /* DetailsInteractor.swift */; };
 		A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF627F968E200498366 /* DetailsPresenter.swift */; };
 		A2DA6CF927F9691700498366 /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF827F9691700498366 /* DetailsModels.swift */; };
+		A2DA6CFB27F96E2600498366 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CFA27F96E2600498366 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A2DA6CF427F968B400498366 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		A2DA6CF627F968E200498366 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		A2DA6CF827F9691700498366 /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
+		A2DA6CFA27F96E2600498366 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */,
+				A2DA6CFA27F96E2600498366 /* Photo.swift */,
 				A2DA6CE627F9628800498366 /* Main */,
 				A2DA6CF327F968A700498366 /* Details */,
 				A2DA6CEC27F9638900498366 /* Supporting Files */,
@@ -112,12 +115,20 @@
 		A2DA6CF327F968A700498366 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				A2DA6CFC27F972EA00498366 /* Views */,
 				A2DA6CF127F9687B00498366 /* DetailsViewController.swift */,
 				A2DA6CF427F968B400498366 /* DetailsInteractor.swift */,
 				A2DA6CF627F968E200498366 /* DetailsPresenter.swift */,
 				A2DA6CF827F9691700498366 /* DetailsModels.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		A2DA6CFC27F972EA00498366 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DA6CFB27F96E2600498366 /* Photo.swift in Sources */,
 				A2DA6CEA27F962E600498366 /* MainPresenter.swift in Sources */,
 				A2DA6CF527F968B400498366 /* DetailsInteractor.swift in Sources */,
 				A23FB8B827F88504001ADECC /* MainViewController.swift in Sources */,

@@ -5,28 +5,29 @@
 //  Created by Ruslan on 03.04.2022.
 //
 
-typealias DetailsRequest = Details.ShowPhotoInfo.Request
-typealias DetailsResponse = Details.ShowPhotoInfo.Response
-typealias DetailsViewModel = Details.ShowPhotoInfo.ViewModel
+typealias DetailsRequest = PhotoDetails.ShowDetails.Request
+typealias DetailsResponse = PhotoDetails.ShowDetails.Response
+typealias DetailsViewModel = PhotoDetails.ShowDetails.ViewModel
 
-enum Details {
+enum PhotoDetails {
     
     // use cases for main scene
-    enum ShowPhotoInfo {
+    enum ShowDetails {
         
         // viewController -> interactor
         struct Request {
-            
+            // TEMPORARILY
+            let photo: Photo
         }
         
         // interactor -> presenter
         struct Response {
-            
+            let photoTitle: String?
         }
         
         // presenter -> viewController
         struct ViewModel {
-            
+            let photoTitle: String
         }
     }
 }

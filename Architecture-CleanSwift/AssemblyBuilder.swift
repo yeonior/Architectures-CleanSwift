@@ -9,6 +9,7 @@ import UIKit
 
 protocol Builder {
     func createMainScene() -> UIViewController
+    func createDetailsScene() -> UIViewController
 }
 
 final class AssemblyBuilder: Builder {
@@ -21,6 +22,19 @@ final class AssemblyBuilder: Builder {
         let viewController = MainViewController()
         let interactor = MainInteractor()
         let presenter = MainPresenter()
+        viewController.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        
+        return viewController
+    }
+    
+    func createDetailsScene() -> UIViewController {
+        let photo = Photo(id: 1, title: "saffgaafsafgwawgagw", stringURL: "")
+        let viewController = DetailsViewController()
+        let interactor = DetailsInteractor()
+        let presenter = DetailsPresenter()
+        viewController.photo = photo
         viewController.interactor = interactor
         interactor.presenter = presenter
         presenter.viewController = viewController

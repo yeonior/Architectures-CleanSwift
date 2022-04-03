@@ -16,6 +16,10 @@
 		A2DA6CEA27F962E600498366 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CE927F962E600498366 /* MainPresenter.swift */; };
 		A2DA6CEE27F9640500498366 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CED27F9640500498366 /* MainModels.swift */; };
 		A2DA6CF027F9676D00498366 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */; };
+		A2DA6CF227F9687B00498366 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF127F9687B00498366 /* DetailsViewController.swift */; };
+		A2DA6CF527F968B400498366 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF427F968B400498366 /* DetailsInteractor.swift */; };
+		A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF627F968E200498366 /* DetailsPresenter.swift */; };
+		A2DA6CF927F9691700498366 /* DetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF827F9691700498366 /* DetailsModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		A2DA6CE927F962E600498366 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		A2DA6CED27F9640500498366 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
 		A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		A2DA6CF127F9687B00498366 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A2DA6CF427F968B400498366 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		A2DA6CF627F968E200498366 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		A2DA6CF827F9691700498366 /* DetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			children = (
 				A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */,
 				A2DA6CE627F9628800498366 /* Main */,
+				A2DA6CF327F968A700498366 /* Details */,
 				A2DA6CEC27F9638900498366 /* Supporting Files */,
 				A2DA6CEB27F9638000498366 /* Storyboards */,
 			);
@@ -98,6 +107,17 @@
 				A23FB8C127F88504001ADECC /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2DA6CF327F968A700498366 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A2DA6CF127F9687B00498366 /* DetailsViewController.swift */,
+				A2DA6CF427F968B400498366 /* DetailsInteractor.swift */,
+				A2DA6CF627F968E200498366 /* DetailsPresenter.swift */,
+				A2DA6CF827F9691700498366 /* DetailsModels.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +191,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2DA6CEA27F962E600498366 /* MainPresenter.swift in Sources */,
+				A2DA6CF527F968B400498366 /* DetailsInteractor.swift in Sources */,
 				A23FB8B827F88504001ADECC /* MainViewController.swift in Sources */,
 				A2DA6CEE27F9640500498366 /* MainModels.swift in Sources */,
+				A2DA6CF227F9687B00498366 /* DetailsViewController.swift in Sources */,
 				A23FB8B427F88504001ADECC /* AppDelegate.swift in Sources */,
 				A23FB8B627F88504001ADECC /* SceneDelegate.swift in Sources */,
+				A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */,
 				A2DA6CF027F9676D00498366 /* AssemblyBuilder.swift in Sources */,
+				A2DA6CF927F9691700498366 /* DetailsModels.swift in Sources */,
 				A2DA6CE827F962BD00498366 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

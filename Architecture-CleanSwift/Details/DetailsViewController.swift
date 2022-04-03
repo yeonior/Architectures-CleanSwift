@@ -100,5 +100,7 @@ final class DetailsViewController: UIViewController {
 extension DetailsViewController: DetailsDisplayLogic {
     func displayPhotoDetails(viewModel: DetailsViewModel) {
         photoTextView.text = viewModel.photoTitle
+        photoIdLabel.text = viewModel.photoId
+        photoImageView.image = UIImage(data: viewModel.photoImageData)
     }
 }

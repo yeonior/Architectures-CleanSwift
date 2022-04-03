@@ -30,7 +30,9 @@ final class AssemblyBuilder: Builder {
     }
     
     func createDetailsScene() -> UIViewController {
-        let photo = Photo(id: 1, title: "saffgaafsafgwawgagw", stringURL: "")
+        let photo = Photo(id: 1,
+                          title: "accusamus beatae ad facilis cum similique qui sunt",
+                          stringURL: "https://via.placeholder.com/600/92c952")
         let viewController = DetailsViewController()
         let interactor = DetailsInteractor()
         let presenter = DetailsPresenter()

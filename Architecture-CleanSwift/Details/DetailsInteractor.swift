@@ -16,6 +16,7 @@ protocol DetailDataStore {
 final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
     
     var presenter: DetailsPresentationLogic?
+    var worker: DetailsWorker?
     var photo: Photo?
     
     func providePhotoDetails(request: DetailsRequest) {
@@ -23,8 +24,16 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
         // TEMPORARILY
         photo = request.photo
         
+        worker = DetailsWorker()
+        
         let title = photo?.title
-        let response = DetailsResponse(photoTitle: title)
+        let id = photo?.id
+        let stringURL = photo?.stringURL
+        let imageData = worker?.getImage(from: stringURL)
+        let response = DetailsResponse(photoTitle: title,
+                                       photoId: id,
+                                       photoImageData: imageData)
+        
         presenter?.presentPhotoDetails(response: response)
     }
 }

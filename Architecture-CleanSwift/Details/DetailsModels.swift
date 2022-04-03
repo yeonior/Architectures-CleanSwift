@@ -5,6 +5,8 @@
 //  Created by Ruslan on 03.04.2022.
 //
 
+import Foundation
+
 typealias DetailsRequest = PhotoDetails.ShowDetails.Request
 typealias DetailsResponse = PhotoDetails.ShowDetails.Response
 typealias DetailsViewModel = PhotoDetails.ShowDetails.ViewModel
@@ -23,11 +25,15 @@ enum PhotoDetails {
         // interactor -> presenter
         struct Response {
             let photoTitle: String?
+            let photoId: Int?
+            let photoImageData: Data?
         }
         
         // presenter -> viewController
         struct ViewModel {
             let photoTitle: String
+            let photoId: String
+            let photoImageData: Data
         }
     }
 }

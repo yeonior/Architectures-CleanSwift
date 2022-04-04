@@ -12,27 +12,27 @@ protocol CellIdentifiable {
     var cellHeight: Double { get }
 }
 
-typealias MainRequest = Main.ShowPhotos.Request
 typealias MainResponse = Main.ShowPhotos.Response
 typealias MainViewModel = Main.ShowPhotos.ViewModel
-typealias MainCellViewModel = Main.ShowPhotos.Response.CellViewModel
+typealias MainCellViewModel = Main.ShowPhotos.ViewModel.CellViewModel
 
 enum Main {
     
     // use cases for main scene
     enum ShowPhotos {
         
-        // viewController -> interactor
-        struct Request {
+        // interactor -> presenter
+        struct Response {
             // TEMPORARILY
             let photos: [Photo]
         }
         
-        // interactor -> presenter
-        struct Response {
+        // presenter -> viewController
+        struct ViewModel {
             
             // cell
             struct CellViewModel: CellIdentifiable {
+                
                 let title: String
                 let id: Int
                 
@@ -50,13 +50,8 @@ enum Main {
                 }
             }
             
-            // row of cells
-            let row: [CellIdentifiable]
-        }
-        
-        // presenter -> viewController
-        struct ViewModel {
-            
+            // rows
+            let rows: [CellIdentifiable]
         }
     }
 }

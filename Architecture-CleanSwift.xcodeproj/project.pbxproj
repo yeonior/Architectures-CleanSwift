@@ -14,6 +14,7 @@
 		A23FB8C027F88504001ADECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23FB8BE27F88504001ADECC /* LaunchScreen.storyboard */; };
 		A2B4923E27FAE45C0032DC0C /* DetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */; };
 		A2B4924027FAEAD70032DC0C /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */; };
+		A2B4924327FB04170032DC0C /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4924227FB04170032DC0C /* MainTableViewCell.swift */; };
 		A2DA6CE827F962BD00498366 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CE727F962BD00498366 /* MainInteractor.swift */; };
 		A2DA6CEA27F962E600498366 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CE927F962E600498366 /* MainPresenter.swift */; };
 		A2DA6CEE27F9640500498366 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CED27F9640500498366 /* MainModels.swift */; };
@@ -38,6 +39,7 @@
 		A23FB8C127F88504001ADECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsConfigurator.swift; sourceTree = "<group>"; };
 		A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		A2B4924227FB04170032DC0C /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		A2DA6CE727F962BD00498366 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		A2DA6CE927F962E600498366 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		A2DA6CED27F9640500498366 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
@@ -92,9 +94,18 @@
 			path = "Architecture-CleanSwift";
 			sourceTree = "<group>";
 		};
+		A2B4924127FB040A0032DC0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2B4924227FB04170032DC0C /* MainTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A2DA6CE627F9628800498366 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A2B4924127FB040A0032DC0C /* Views */,
 				A23FB8B727F88504001ADECC /* MainViewController.swift */,
 				A2DA6CE727F962BD00498366 /* MainInteractor.swift */,
 				A2DA6CE927F962E600498366 /* MainPresenter.swift */,
@@ -126,7 +137,6 @@
 		A2DA6CF327F968A700498366 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				A2DA6CFC27F972EA00498366 /* Views */,
 				A2DA6CF127F9687B00498366 /* DetailsViewController.swift */,
 				A2DA6CF427F968B400498366 /* DetailsInteractor.swift */,
 				A2DA6CF627F968E200498366 /* DetailsPresenter.swift */,
@@ -135,13 +145,6 @@
 				A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		A2DA6CFC27F972EA00498366 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A2DA6D0327F99C1F00498366 /* Services */ = {
@@ -234,6 +237,7 @@
 				A2DA6D0227F99BBE00498366 /* ImageManager.swift in Sources */,
 				A23FB8B427F88504001ADECC /* AppDelegate.swift in Sources */,
 				A23FB8B627F88504001ADECC /* SceneDelegate.swift in Sources */,
+				A2B4924327FB04170032DC0C /* MainTableViewCell.swift in Sources */,
 				A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */,
 				A2B4924027FAEAD70032DC0C /* MainConfigurator.swift in Sources */,
 				A2DA6CFE27F99B2900498366 /* DetailsWorker.swift in Sources */,

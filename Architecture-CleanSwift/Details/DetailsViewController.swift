@@ -14,14 +14,25 @@ protocol DetailsDisplayLogic: AnyObject {
 
 final class DetailsViewController: UIViewController {
     
-    let photoImageView = UIImageView()
-    let photoTextView = UITextView()
-    let photoIdLabel = UILabel()
-    let favouriteButton = UIButton()
+    // MARK: - Properties
+    private let photoImageView = UIImageView()
+    private let photoTextView = UITextView()
+    private let photoIdLabel = UILabel()
+    private let favouriteButton = UIButton()
     var interactor: DetailsBusinessLogic?
     
     // TEMPORARILY
     var photo: Photo!
+    
+    // MARK: - Lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        DetailsConfigurator.shared.configure(with: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +117,7 @@ final class DetailsViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension DetailsViewController: DetailsDisplayLogic {
     func displayPhotoDetails(viewModel: ShowDetailsViewModel) {
         photoTextView.text = viewModel.photoTitle

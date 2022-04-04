@@ -12,10 +12,11 @@
 		A23FB8B827F88504001ADECC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23FB8B727F88504001ADECC /* MainViewController.swift */; };
 		A23FB8BD27F88504001ADECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23FB8BC27F88504001ADECC /* Assets.xcassets */; };
 		A23FB8C027F88504001ADECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23FB8BE27F88504001ADECC /* LaunchScreen.storyboard */; };
+		A2B4923E27FAE45C0032DC0C /* DetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */; };
+		A2B4924027FAEAD70032DC0C /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */; };
 		A2DA6CE827F962BD00498366 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CE727F962BD00498366 /* MainInteractor.swift */; };
 		A2DA6CEA27F962E600498366 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CE927F962E600498366 /* MainPresenter.swift */; };
 		A2DA6CEE27F9640500498366 /* MainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CED27F9640500498366 /* MainModels.swift */; };
-		A2DA6CF027F9676D00498366 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */; };
 		A2DA6CF227F9687B00498366 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF127F9687B00498366 /* DetailsViewController.swift */; };
 		A2DA6CF527F968B400498366 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF427F968B400498366 /* DetailsInteractor.swift */; };
 		A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA6CF627F968E200498366 /* DetailsPresenter.swift */; };
@@ -35,10 +36,11 @@
 		A23FB8BC27F88504001ADECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A23FB8BF27F88504001ADECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A23FB8C127F88504001ADECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsConfigurator.swift; sourceTree = "<group>"; };
+		A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
 		A2DA6CE727F962BD00498366 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		A2DA6CE927F962E600498366 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		A2DA6CED27F9640500498366 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
-		A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		A2DA6CF127F9687B00498366 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A2DA6CF427F968B400498366 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		A2DA6CF627F968E200498366 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
@@ -80,7 +82,6 @@
 		A23FB8B227F88504001ADECC /* Architecture-CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
-				A2DA6CEF27F9676D00498366 /* AssemblyBuilder.swift */,
 				A2DA6CFA27F96E2600498366 /* Photo.swift */,
 				A2DA6CE627F9628800498366 /* Main */,
 				A2DA6CF327F968A700498366 /* Details */,
@@ -98,6 +99,7 @@
 				A2DA6CE727F962BD00498366 /* MainInteractor.swift */,
 				A2DA6CE927F962E600498366 /* MainPresenter.swift */,
 				A2DA6CED27F9640500498366 /* MainModels.swift */,
+				A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -130,6 +132,7 @@
 				A2DA6CF627F968E200498366 /* DetailsPresenter.swift */,
 				A2DA6CF827F9691700498366 /* DetailsModels.swift */,
 				A2DA6CFD27F99B2900498366 /* DetailsWorker.swift */,
+				A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -232,10 +235,11 @@
 				A23FB8B427F88504001ADECC /* AppDelegate.swift in Sources */,
 				A23FB8B627F88504001ADECC /* SceneDelegate.swift in Sources */,
 				A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */,
+				A2B4924027FAEAD70032DC0C /* MainConfigurator.swift in Sources */,
 				A2DA6CFE27F99B2900498366 /* DetailsWorker.swift in Sources */,
 				A2DA6D0027F99B9000498366 /* NetworkManager.swift in Sources */,
-				A2DA6CF027F9676D00498366 /* AssemblyBuilder.swift in Sources */,
 				A2DA6CF927F9691700498366 /* DetailsModels.swift in Sources */,
+				A2B4923E27FAE45C0032DC0C /* DetailsConfigurator.swift in Sources */,
 				A2DA6CE827F962BD00498366 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

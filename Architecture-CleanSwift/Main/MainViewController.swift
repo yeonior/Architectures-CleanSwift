@@ -48,7 +48,6 @@ final class MainViewController: UIViewController, MainDisplayLogic {
     
     // MARK: - Internal methods
     func displayPhotos(viewModel: MainViewModel) {
-        print(Thread.isMainThread)
         rows = viewModel.rows
         self.tableView.reloadData()
     }

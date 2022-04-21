@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A239F0392811B37C007050E9 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A239F0382811B37C007050E9 /* MainRouter.swift */; };
+		A239F03B2811D9EA007050E9 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A239F03A2811D9EA007050E9 /* DetailsRouter.swift */; };
 		A23FB8B427F88504001ADECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23FB8B327F88504001ADECC /* AppDelegate.swift */; };
 		A23FB8B627F88504001ADECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23FB8B527F88504001ADECC /* SceneDelegate.swift */; };
 		A23FB8B827F88504001ADECC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23FB8B727F88504001ADECC /* MainViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A239F0382811B37C007050E9 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		A239F03A2811D9EA007050E9 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		A23FB8B027F88504001ADECC /* Architecture-CleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Architecture-CleanSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23FB8B327F88504001ADECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23FB8B527F88504001ADECC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				A2DA6CE927F962E600498366 /* MainPresenter.swift */,
 				A2DA6CED27F9640500498366 /* MainModels.swift */,
 				A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */,
+				A239F0382811B37C007050E9 /* MainRouter.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				A2DA6CF827F9691700498366 /* DetailsModels.swift */,
 				A2DA6CFD27F99B2900498366 /* DetailsWorker.swift */,
 				A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */,
+				A239F03A2811D9EA007050E9 /* DetailsRouter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -233,12 +239,14 @@
 				A2DA6CF527F968B400498366 /* DetailsInteractor.swift in Sources */,
 				A23FB8B827F88504001ADECC /* MainViewController.swift in Sources */,
 				A2DA6CEE27F9640500498366 /* MainModels.swift in Sources */,
+				A239F0392811B37C007050E9 /* MainRouter.swift in Sources */,
 				A2DA6CF227F9687B00498366 /* DetailsViewController.swift in Sources */,
 				A2DA6D0227F99BBE00498366 /* ImageManager.swift in Sources */,
 				A23FB8B427F88504001ADECC /* AppDelegate.swift in Sources */,
 				A23FB8B627F88504001ADECC /* SceneDelegate.swift in Sources */,
 				A2B4924327FB04170032DC0C /* MainTableViewCell.swift in Sources */,
 				A2DA6CF727F968E200498366 /* DetailsPresenter.swift in Sources */,
+				A239F03B2811D9EA007050E9 /* DetailsRouter.swift in Sources */,
 				A2B4924027FAEAD70032DC0C /* MainConfigurator.swift in Sources */,
 				A2DA6CFE27F99B2900498366 /* DetailsWorker.swift in Sources */,
 				A2DA6D0027F99B9000498366 /* NetworkManager.swift in Sources */,

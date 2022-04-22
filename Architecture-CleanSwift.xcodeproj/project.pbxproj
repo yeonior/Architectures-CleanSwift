@@ -98,22 +98,14 @@
 			path = "Architecture-CleanSwift";
 			sourceTree = "<group>";
 		};
-		A2B4924127FB040A0032DC0C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A2B4924227FB04170032DC0C /* MainTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		A2DA6CE627F9628800498366 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A2B4924127FB040A0032DC0C /* Views */,
+				A2DA6CED27F9640500498366 /* MainModels.swift */,
 				A23FB8B727F88504001ADECC /* MainViewController.swift */,
+				A2B4924227FB04170032DC0C /* MainTableViewCell.swift */,
 				A2DA6CE727F962BD00498366 /* MainInteractor.swift */,
 				A2DA6CE927F962E600498366 /* MainPresenter.swift */,
-				A2DA6CED27F9640500498366 /* MainModels.swift */,
 				A2B4923F27FAEAD70032DC0C /* MainConfigurator.swift */,
 				A239F0382811B37C007050E9 /* MainRouter.swift */,
 			);
@@ -142,10 +134,10 @@
 		A2DA6CF327F968A700498366 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				A2DA6CF827F9691700498366 /* DetailsModels.swift */,
 				A2DA6CF127F9687B00498366 /* DetailsViewController.swift */,
 				A2DA6CF427F968B400498366 /* DetailsInteractor.swift */,
 				A2DA6CF627F968E200498366 /* DetailsPresenter.swift */,
-				A2DA6CF827F9691700498366 /* DetailsModels.swift */,
 				A2DA6CFD27F99B2900498366 /* DetailsWorker.swift */,
 				A2B4923D27FAE45C0032DC0C /* DetailsConfigurator.swift */,
 				A239F03A2811D9EA007050E9 /* DetailsRouter.swift */,

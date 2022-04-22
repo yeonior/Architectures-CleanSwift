@@ -14,6 +14,7 @@ protocol MainDisplayLogic: AnyObject {
 final class MainViewController: UIViewController, MainDisplayLogic {
     
     var interactor: MainBusinessLogic?
+    var router: (MainRoutingLogic & MainDataPassing)?
     
     private var tableView = UITableView()
     private var rows: [CellIdentifiable] = []
@@ -78,6 +79,8 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let router = router else { return }
+        router.routeToDetails(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -23,7 +23,6 @@ enum Main {
         
         // interactor -> presenter
         struct Response {
-            // TEMPORARILY
             let photos: [Photo]
         }
         

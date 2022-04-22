@@ -8,23 +8,14 @@
 import UIKit
 
 protocol DetailsRoutingLogic {
-    func routeToMain()
 }
 
 protocol DetailsDataPassing {
-    var dataStore: DetailDataStore? { get }
+    var dataStore: DetailsDataStore? { get }
 }
 
-final class DetailsRouter: NSObject, DetailsRoutingLogic, DetailsDataPassing {
+final class DetailsRouter: DetailsRoutingLogic, DetailsDataPassing {
     
     weak var viewController: DetailsViewController?
-    var dataStore: DetailDataStore?
-    
-    func routeToMain() {
-        
-    }
-    
-    func navigateToMain(source: DetailsViewController, destination: MainViewController) {
-        
-    }
+    var dataStore: DetailsDataStore?
 }

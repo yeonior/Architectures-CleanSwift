@@ -20,8 +20,7 @@ enum PhotoDetails {
         
         // viewController -> interactor
         struct Request {
-            // TEMPORARILY
-            let photo: Photo
+            
         }
         
         // interactor -> presenter

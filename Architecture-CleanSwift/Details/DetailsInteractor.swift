@@ -11,11 +11,11 @@ protocol DetailsBusinessLogic {
     func setFavouriteStatus()
 }
 
-protocol DetailDataStore {
+protocol DetailsDataStore {
     var photo: Photo? { get set }
 }
 
-final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
+final class DetailsInteractor: DetailsBusinessLogic, DetailsDataStore {
     
     var presenter: DetailsPresentationLogic?
     var worker: DetailsWorker?
@@ -23,9 +23,6 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
     var isFavourite: Bool = false
     
     func providePhotoDetails(request: ShowDetailsRequest) {
-        
-        // TEMPORARILY
-        photo = request.photo
         
         worker = DetailsWorker()
         isFavourite = worker?.getFavouriteStatus(for: photo?.title ?? "") ?? false
@@ -36,9 +33,9 @@ final class DetailsInteractor: DetailsBusinessLogic, DetailDataStore {
         let imageData = worker?.getImage(from: stringURL)
         
         let response = ShowDetailsResponse(photoTitle: title,
-                                       photoId: id,
-                                       photoImageData: imageData,
-                                       isFavourite: isFavourite)
+                                           photoId: id,
+                                           photoImageData: imageData,
+                                           isFavourite: isFavourite)
         
         presenter?.presentPhotoDetails(response: response)
     }

@@ -20,9 +20,7 @@ final class DetailsViewController: UIViewController {
     private let photoIdLabel = UILabel()
     private let favouriteButton = UIButton()
     var interactor: DetailsBusinessLogic?
-    
-    // TEMPORARILY
-    var photo: Photo!
+    var router: (DetailsRoutingLogic & DetailsDataPassing)?
     
     // MARK: - Lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -104,7 +102,7 @@ final class DetailsViewController: UIViewController {
     }
     
     private func passRequest() {
-        let request = ShowDetailsRequest(photo: photo)
+        let request = ShowDetailsRequest()
         interactor?.providePhotoDetails(request: request)
     }
     
